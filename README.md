@@ -42,7 +42,7 @@
 - 「背景が物体か」については、ground truthとAnchor boxesのIoUを計算し、「IoU < 0.3」なら「背景」、「IoU > 0.7」なら「物体」とラベルを付ける
 - そのため、9(Anchor boxesの数) × 2（ラベル） = 18クラスが作られます。なお、「0.3 ≦ IoU ≦ 0.7」のboxについては、背景とも物体とも言えないので学習には使用しない（IoUの閾値もハイパーパラメータで指定）
 <img alt="FasterR-CNN" src=./image/label.png></img>
--「ground truthであるAnchor boxのズレ」については、「中心ｘ座標のズレ」、「中心y座標のズレ」、「横の長さのズレ」、「縦の長さのズレ」という４つの指標で評価。そのため、9(Anchor boxesの数) × 4（ズレ) = 36クラスが作成される
+- 「ground truthであるAnchor boxのズレ」については、「中心ｘ座標のズレ」、「中心y座標のズレ」、「横の長さのズレ」、「縦の長さのズレ」という４つの指標で評価。そのため、9(Anchor boxesの数) × 4（ズレ) = 36クラスが作成される
 <img alt="FasterR-CNN" src=./image/reg.png></img>
 
 #### 3, クラス分類と矩形の推定
